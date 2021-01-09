@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">QUẢN LÝ SINH VIÊN</h1>
+                <div class="form-group">
+                    <span>Mã sinh viên</span>
+                    <input type="text" class="form-control maSinhVien" placeholder="Nhập mã sinh viên">
+                    <div class="errMaSinhVien"></div>
+                </div>
+                <div class="form-group">
+                    <span>Tên sinh viên</span>
+                    <input type="text" class="form-control tenSinhVien" placeholder="Nhập tên sinh viên">
+                </div>
+                <div class="form-group">
+                    <span>Email</span>
+                    <input type="text" class="form-control email" placeholder="Nhập email">
+                </div>
+                <div class="form-group">
+                    <span>Loại sinh viên</span>
+                    <select class="form-control loaiSinhVien">
+                        <option value="khó khăn">Khó khăn</option>
+                        <option value="bình thường" selected>Bình thường</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <span>Điểm toán</span>
+                            <input type="text" class="form-control diemToan" placeholder="Nhập điểm toán"> 
+                            <div class="errdiemToan"></div>
+                        </div>
+                        <div class="col-4">
+                            <span>Điểm lý</span>
+                            <input type="text" class="form-control diemLy" placeholder="Nhập điểm lý"> 
+                        </div>
+                        <div class="col-4">
+                            <span>Điểm hóa</span>
+                            <input type="text" class="form-control diemHoa" placeholder="Nhập điểm hóa"> 
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <span>Điểm rèn luyện</span>
+                    <input type="text" class="form-control diemRenLuyen" placeholder="Nhập điểm rèn luyện">
+                </div>
+                <div class="form-group text-center">
+                    <button id="btnXacNhan" class="btn btn-primary">Xác nhận</button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Mã sinh vien</th>
+                            <th>Tên sinh viên</th>
+                            <th>Email</th>
+                            <th>Loại sinh viên</th>
+                            <th>Điểm trung bình</th>
+                            <th>Điểm rèn luyện</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbSinhVien">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- thư viện  -->
+    <script src="./Common/Validation.js"></script>
+
+    <!-- Khai báo model trước controller -->
+    <script src="./Models/SinhVien.js"></script>
+    <script src="./Controllers/index.js"></script>
+    
+  </body>
+</html>
